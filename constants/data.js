@@ -20,7 +20,7 @@ const userData = {
     {
       title: "NASA SpaceX Lanunches",
       link: "http://13.208.211.38:8000/",
-      imgUrl: "/portfolio.png",
+      imgUrl: "/nasa-project.png",
     },
   ],
   about: {
