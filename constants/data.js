@@ -19,7 +19,7 @@ const userData = {
     },
     {
       title: "NASA SpaceX Lanunches",
-      link: "https://manuarora.in",
+      link: "http://13.208.211.38:8000/",
       imgUrl: "/portfolio.png",
     },
   ],
