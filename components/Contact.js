@@ -70,8 +70,8 @@ export default function Contact() {
                 </p>
               </div>
             </div>
-            <div className="social-icons flex flex-row space-x-8">
-              <a
+            {/* <div className="social-icons flex flex-row space-x-8"> */}
+              {/* <a
                 href={userData.socialLinks.facebook}
                 className="h-10 w-10 rounded-full hover:bg-blue-500 flex items-center justify-center cursor-pointer"
               >
@@ -108,8 +108,8 @@ export default function Contact() {
                     fill="currentColor"
                   />
                 </svg>
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href={userData.socialLinks.instagram}
                 className="h-10 w-10 rounded-full hover:bg-blue-500 flex items-center justify-center cursor-pointer"
               >
@@ -138,8 +138,8 @@ export default function Contact() {
                     fill="currentColor"
                   />
                 </svg>
-              </a>
-            </div>
+              </a> */}
+            {/* </div> */}
           </div>
           <form className="form rounded-lg bg-white p-4 flex flex-col">
             <label htmlFor="name" className="text-sm text-gray-600 mx-4">
