@@ -1,7 +1,42 @@
-import React from "react";
+import React, {useState} from "react";
 import userData from "@constants/data";
 
 export default function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = () => {
+    e.preventDefault();
+    console.log('Sending')
+    let data = {
+      name,
+      email,
+      message
+    }
+    fetch('api/contact', {
+      method: 'POST',
+      headers: {
+        'Accpect': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      if(res.status === 200) {
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setName('')
+        setEmail('')
+        setMessage('')
+      }
+    })
+  }
+
+  console.log({name})
+  console.log({email})
+  console.log({message})
   return (
     <section>
       <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800 antialiased">
@@ -148,6 +183,7 @@ export default function Contact() {
             </label>
             <input
               type="text"
+              onChange={ (e) => {setName(e.target.value)}}
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="name"
             />
@@ -156,6 +192,7 @@ export default function Contact() {
             </label>
             <input
               type="text"
+              onChange={ (e) => {setEmail(e.target.value)}}
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="email"
             />
@@ -168,11 +205,13 @@ export default function Contact() {
             <textarea
               rows="4"
               type="text"
+              onChange={ (e) => {setMessage(e.target.value)}}
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="message"
             ></textarea>
             <button
               type="submit"
+              onClick={(e)=>{handleSubmit(e)}}
               className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
             >
               Send Message
