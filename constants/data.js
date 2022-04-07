@@ -13,9 +13,9 @@ const userData = {
       imgUrl: "/tmk.jpg",
     },
     {
-      title: "NextFlix",
-      link: "https://placeholdertech.in",
-      imgUrl: "/placeholdertech.png",
+      title: "KendoDeal",
+      link: "https://kendodeal.herokuapp.com/",
+      imgUrl: "/kendodeal.png",
     },
     {
       title: "NASA SpaceX Lanunches",
