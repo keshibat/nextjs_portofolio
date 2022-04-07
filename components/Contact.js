@@ -7,29 +7,29 @@ export default function Contact() {
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = () => {
-    e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault()
     console.log('Sending')
-    let data = {
+  let data = {
       name,
       email,
       message
     }
-    fetch('api/contact', {
+  fetch('/api/contact', {
       method: 'POST',
       headers: {
-        'Accpect': 'application/json, text/plain, */*',
+        'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     }).then((res) => {
       console.log('Response received')
-      if(res.status === 200) {
+      if (res.status === 200) {
         console.log('Response succeeded!')
         setSubmitted(true)
         setName('')
         setEmail('')
-        setMessage('')
+        setBody('')
       }
     })
   }
@@ -191,7 +191,7 @@ export default function Contact() {
               Email
             </label>
             <input
-              type="text"
+              type="email"
               onChange={ (e) => {setEmail(e.target.value)}}
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="email"
@@ -202,13 +202,13 @@ export default function Contact() {
             >
               Message
             </label>
-            <textarea
+            <input
               rows="4"
               type="text"
               onChange={ (e) => {setMessage(e.target.value)}}
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="message"
-            ></textarea>
+            ></input>
             <button
               type="submit"
               onClick={(e)=>{handleSubmit(e)}}
