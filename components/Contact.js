@@ -202,13 +202,13 @@ export default function Contact() {
             >
               Message
             </label>
-            <input
+            <textarea
               rows="4"
               type="text"
               onChange={ (e) => {setMessage(e.target.value)}}
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="message"
-            ></input>
+            ></textarea>
             <button
               type="submit"
               onClick={(e)=>{handleSubmit(e)}}
