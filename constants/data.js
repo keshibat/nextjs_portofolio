@@ -9,8 +9,8 @@ const userData = {
   projects: [
     {
       title: "Online Shopping Site",
-      link: "https://tailwindmasterkit.com",
-      imgUrl: "/tmk.jpg",
+      link: "https://jeeash-live.herokuapp.com/",
+      imgUrl: "/crown_clothing.png",
     },
     {
       title: "KendoDeal",
