@@ -2,7 +2,7 @@ const userData = {
   githubUsername: "keshibat",
   name: "Kensuke Shibata",
   designation: "Front-end Web Developer",
-  avatarUrl: "/raglan_roast.jpeg",
+  avatarUrl: "/raglan_roast.jpg",
   email: "kensukeshibata@gmail.com",
   phone: "+80 4911-6151",
   address: "Shibuya, Tokyo, Japan.",

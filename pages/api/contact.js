@@ -6,7 +6,7 @@ export default function (req, res) {
       host: "smtp.gmail.com",
          auth: {
               user: 'keshibatmail@gmail.com',
-               pass: 'N3f?$Yx7_:"}Q,K;',
+               pass: process.env.NEXT_PUBLIC_PASSWORD,
            },
       secure: true,
     });
