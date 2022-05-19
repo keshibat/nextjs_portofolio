@@ -9,7 +9,7 @@ const userData = {
   projects: [
     {
       title: "Online Shopping Site",
-      link: "https://jeeash-live.herokuapp.com/",
+      link: "https://unrivaled-belekoy-7291c2.netlify.app",
       imgUrl: "/crown_clothing.png",
     },
     {
